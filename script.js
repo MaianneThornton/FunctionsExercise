@@ -148,4 +148,58 @@ const stephenKingMovies = [
   "Creepshow",
   "Pet Cemetary"
 ];
-console.log(stephenKingMovies);
+
+// 12b
+const twoMovies = stephenKingMovies.filter(i => i.length === 9)
+console.log(twoMovies); // [ 'Christine', 'Creepshow' ]
+
+console.log("========");
+
+// 13a
+const halloweenSongs1 = [
+  "Monster Mash",
+  "Thriller"
+];
+
+// 13b
+const halloweenSongs2 = [
+  "I Put A Spell On You",
+  "This Is Halloween", "Ghostbusters"
+];
+
+// 13c
+halloweenJukeBox = songs => {
+  const random = Math.floor(Math.random() * songs.length);
+  console.log(songs[random]);
+}
+
+// 13d
+halloweenJukeBox(halloweenSongs1); // Random item/song from the halloweenSongs1 array
+halloweenJukeBox(halloweenSongs1);
+halloweenJukeBox(halloweenSongs1); // Random item/song from the halloweenSongs2 array
+halloweenJukeBox(halloweenSongs2);
+
+console.log("========");
+
+// 14
+
+caps = string => {
+  let newString = ``;
+  for (i = 0;  i < string.length; i++){
+    if (i % 2 === 0){
+      newString = newString + string[i].toUpperCase();
+    } else {
+      newString = newString + string[i]
+    }
+  }
+  return newString
+}
+console.log(caps(`Hey`)); // HeY
+
+// caps = string => {
+//   for (i = 0; i < string.length; i += 2) {
+//     string = string.substring(0, i) + string[i].toUpperCase() + string.substring(i + 1);
+//   }
+//   return string;
+// }
+console.log(caps (`Halloween`)); // HaLlOwEeN
